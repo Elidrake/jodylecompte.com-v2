@@ -203,3 +203,26 @@ footer .copyright a{
 .blog-post-container {
     padding: 20px;
 }
+
+.blog-latest-posts h2{
+    text-align: center;
+}
+
+.blog-latest-posts {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.home-blog-link {
+    margin: 2em;
+}
+
+.home-blog-link a {
+    color: #07ABEC;
+}
+
+.home-blog-link .posted-date {
+    color: #aaa;
+    font-weight: 300;
+    font-size: 16px;
+}
