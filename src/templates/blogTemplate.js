@@ -14,6 +14,9 @@ export default function Template({
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
           <div className="blog-posted-date">Posted on {frontmatter.date}</div>
+          <div className="blog-social-image">
+            <img src={frontmatter.socialImage} />
+          </div>
           <div className="blog-toc">
             <h2>Table of Contents</h2>
             <div dangerouslySetInnerHTML={{ __html: tableOfContents }}></div>
@@ -40,6 +43,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         slug
+        socialImage
         title
       }
     }

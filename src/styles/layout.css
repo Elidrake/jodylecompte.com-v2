@@ -35,7 +35,7 @@ header {
 }
 
 header a {
-    color: #222;
+    color: #222 !important;
     text-decoration: none;
     display: inline-flex;
 }
@@ -222,7 +222,7 @@ footer .copyright a{
 }
 
 .blog-latest-posts {
-    width: 75%;
+    /*width: 75%;*/
     margin: 0 auto;
 }
 
@@ -273,6 +273,15 @@ footer .copyright a{
 
 .blog-toc {
     margin-top: 1.5em;
+}
+
+.blog-social-image {
+    text-align: center;
+    margin: 1em;
+}
+
+.blog-social-image img {
+    width: 100%;
 }
 /*
 ****************************
