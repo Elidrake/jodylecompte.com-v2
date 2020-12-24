@@ -43,6 +43,7 @@ const Layout = ({ children }) => {
             </div>
           </div>
         </div>
+        <hr />
         {children}
       </main>
       <Footer />
