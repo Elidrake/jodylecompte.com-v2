@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import { HamburgerVortex } from "react-animated-burgers"
+import PostLink from "./postLink"
 
 const Header = ({ siteTitle }) => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -8,9 +9,11 @@ const Header = ({ siteTitle }) => {
   return (
     <header>
       <div className="brand">
-        <span class="logo-box">J</span>
-        <span class="brand-accent">Jody </span>
-        LeCompte
+        <Link to="/">
+          <span class="logo-box">J</span>
+          <span class="brand-accent">Jody </span>
+          LeCompte
+        </Link>
       </div>
       <div
         class={menuOpen ? "menu open" : "menu"}

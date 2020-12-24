@@ -34,9 +34,16 @@ header {
     justify-content: space-between;
 }
 
+header a {
+    color: #222;
+    text-decoration: none;
+    display: inline-flex;
+}
+
 header .brand {
     display: flex;
     align-items: center;
+    flex-direction: row;
 }
 
 header .brand span.logo-box {
@@ -55,6 +62,12 @@ header .brand span.logo-box {
 header .brand span.brand-accent {
     font-weight: 600;
     margin-right: 5px;
+}
+
+header .menu {
+    display: flex;
+    justify-content: center;
+    align-items: centers;
 }
 
 /*
@@ -225,4 +238,28 @@ footer .copyright a{
     color: #aaa;
     font-weight: 300;
     font-size: 16px;
+}
+
+.all-posts-section {
+    text-align: center;
+}
+
+/*
+****************************
+* Global UI Components
+****************************
+*/
+.btn {
+    border: 1px solid #07ABEC;
+    color: #07ABEC;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    transition: background 500ms, color 500ms;
+}
+
+.btn:hover {
+    background: #07ABEC;
+    color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.08);
 }
