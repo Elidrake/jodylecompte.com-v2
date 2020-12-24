@@ -259,6 +259,20 @@ footer .copyright a{
     margin: 1em;
 }
 
+.blog-posted-date {
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+    margin-top: -1.5em;
+}
+
+.blog-post h1 {
+    margin-top: -0.8em;
+}
+
+.blog-toc {
+    margin-top: 1.5em;
+}
 /*
 ****************************
 * Global UI Components
@@ -289,5 +303,6 @@ hr {
 }
 
 a, a:visited, a:focus {
+    color: #07ABEC;
     text-decoration: none;
 }
