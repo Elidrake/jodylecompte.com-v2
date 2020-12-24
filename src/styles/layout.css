@@ -242,10 +242,20 @@ footer .copyright a{
 
 .home-blog-link .desc {
     margin-top: 1em;
+    font-size: 14px;
 }
 
 .all-posts-section {
     text-align: center;
+    margin: 1em;
+}
+
+.blog-pagination {
+    text-align: center;
+    margin: 1em;
+}
+
+.blog-pagination a {
     margin: 1em;
 }
 

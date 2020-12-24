@@ -1,16 +1,39 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+
 import Layout from "../components/layout"
+import PostLink from "../components/postLink"
 
 export default class BlogList extends React.Component {
   render() {
+    const { currentPage, numPages } = this.props.pageContext
+    const isFirst = currentPage === 1
+    const isLast = currentPage === numPages
+    let prevPage =
+      currentPage - 1 === 1 ? "/blog" : "/blog/" + (currentPage - 1).toString()
+    const nextPage = (currentPage + 1).toString()
+
     const posts = this.props.data.allMarkdownRemark.edges
     return (
       <Layout>
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.frontmatter.slug
-          return <div key={node.frontmatter.slug}>{title}</div>
-        })}
+        <div className="blog-latest-posts">
+          <h2>All Posts</h2>
+          {posts.map(({ node }) => {
+            return <PostLink post={node} />
+          })}
+        </div>
+        <div class="blog-pagination">
+          {!isFirst && (
+            <Link className="btn" to={prevPage} rel="prev">
+              ← Previous Page
+            </Link>
+          )}
+          {!isLast && (
+            <Link className="btn" to={"/blog/" + nextPage} rel="next">
+              Next Page →
+            </Link>
+          )}
+        </div>
       </Layout>
     )
   }
@@ -27,6 +50,8 @@ export const blogListQuery = graphql`
           frontmatter {
             title
             slug
+            description
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }
