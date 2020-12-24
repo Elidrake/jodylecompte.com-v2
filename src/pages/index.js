@@ -1,21 +1,27 @@
 import React from "react"
-import { Link } from "gatsby"
+
+import Selfie from "../images/selfie.png"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({ children }) => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="home-header">
+      <div className="photo">
+        <img src={Selfie} />
+      </div>
+      <div className="about-me">
+        <div className="title">Full-Stack Developer, Writer, Marketer</div>
+        <div className="name">Jody LeCompte</div>
+        <div className="desc">
+          I am a father, fisherman, and full stack developer dedicated to
+          helping others to learn and reach their maximum potential while I work
+          to reach my own.
+        </div>
+      </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
 
