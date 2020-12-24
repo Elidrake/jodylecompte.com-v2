@@ -215,7 +215,8 @@ We then check to ensure that for the current block, the hash still matches what 
 
 Lastly, we then check the previous hash to ensure that it still matches as well. If either of these conditions fail, we return false, noting that the chain is invalid. Otherwise we return true.
 
-# Wrapping It Up
+
+## Wrapping It Up
 
 To test everything out, let's create a file called `example.js` in our main directory (not src) and load it with the following code:
 
