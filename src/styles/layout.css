@@ -350,3 +350,54 @@ a, a:visited, a:focus {
     margin-right: 10px;
     padding: 5px;
 }
+
+/*
+****************************
+* Sidebar styles
+****************************
+*/
+
+.sidebar-social {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.sidebar-social i {
+    margin: 5px;
+    padding: 10px;
+    height: 25px;
+    width: 25px;
+    color: #222;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.08);
+    border-radius: 50%;
+    transition: color 500ms;
+}
+
+.sidebar-social i:hover {
+    color: #07ABEC;
+}
+
+.sidebar-links ul {
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    margin: 1em;
+    padding: 0;
+}
+
+.sidebar-links li {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.sidebar-links li:hover {
+    background: #07ABEC;
+}
+
+.sidebar-links li:hover a {
+    color: #fff;
+}

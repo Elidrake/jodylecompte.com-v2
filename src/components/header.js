@@ -2,9 +2,7 @@ import { Link } from "gatsby"
 import React, { useState } from "react"
 import { HamburgerVortex } from "react-animated-burgers"
 
-const Header = ({ siteTitle }) => {
-  const [menuOpen, setMenuOpen] = useState(false)
-
+const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
   return (
     <header>
       <div className="brand">

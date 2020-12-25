@@ -1,20 +1,16 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Sidebar from "react-sidebar"
 
 import Header from "./header"
 import Footer from "./footer"
+import SidebarContent from "./sidebar"
 
 import "../styles/layout.css"
 import Selfie from "../images/selfie.png"
 
 const Layout = ({ children }) => {
+  const [menuOpen, setMenuOpen] = useState(false)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,8 +22,17 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+    <Sidebar
+      sidebar={<SidebarContent />}
+      open={menuOpen}
+      onSetOpen={setMenuOpen}
+      styles={{ sidebar: { background: "white", width: "250px" } }}
+    >
+      <Header
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+      />
       <main className="container">
         <div className="home-header">
           <div className="photo">
@@ -47,7 +52,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <Footer />
-    </>
+    </Sidebar>
   )
 }
 

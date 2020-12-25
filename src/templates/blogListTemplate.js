@@ -16,7 +16,7 @@ export default class BlogList extends React.Component {
     const posts = this.props.data.allMarkdownRemark.edges
     return (
       <Layout>
-        <div className="blog-latest-posts">
+        <div className="blog-latest-posts" id="blog-posts">
           <h2>All Posts</h2>
           {posts.map(({ node }) => {
             return <PostLink post={node} />
