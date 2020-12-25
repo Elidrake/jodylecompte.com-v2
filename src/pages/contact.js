@@ -20,7 +20,7 @@ const Contact = () => {
           name="contact"
           method="POST"
           data-netlify="true"
-          action="/thank-you"
+          action="./thank-you"
         >
           <div className="form-group">
             <label htmlFor="frmName">Name: </label>
@@ -41,12 +41,12 @@ const Contact = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="exampleFormControlInput1">Subject: </label>
+            <label htmlFor="frmSubject">Subject: </label>
             <input
-              type="email"
+              type="text"
               className="form-control"
-              id="exampleFormControlInput1"
-              placeholder="name@example.com"
+              id="frmSubject"
+              placeholder="Subject"
             />
           </div>
           <div className="form-group">
