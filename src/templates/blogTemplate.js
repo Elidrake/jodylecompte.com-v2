@@ -1,5 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import _ from "lodash"
 
 import Layout from "../components/layout"
 
@@ -14,6 +15,15 @@ export default function Template({
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
           <div className="blog-posted-date">Posted on {frontmatter.date}</div>
+          <div style={{ textAlign: "center" }} className="tags-link-list">
+            {frontmatter.tags.map(tag => {
+              return (
+                <Link to={"/tags/" + _.kebabCase(tag)}>
+                  <span>{tag}</span>
+                </Link>
+              )
+            })}
+          </div>
           <div className="blog-social-image">
             <img src={frontmatter.socialImage} />
           </div>
@@ -26,6 +36,11 @@ export default function Template({
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
+          <div class="more-posts-button">
+            <Link to="/" className="btn">
+              More Posts
+            </Link>
+          </div>
         </div>
       </div>
     </Layout>
@@ -45,6 +60,7 @@ export const pageQuery = graphql`
         slug
         socialImage
         title
+        tags
       }
     }
   }

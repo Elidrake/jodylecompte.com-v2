@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import { HamburgerVortex } from "react-animated-burgers"
-import PostLink from "./postLink"
 
 const Header = ({ siteTitle }) => {
   const [menuOpen, setMenuOpen] = useState(false)

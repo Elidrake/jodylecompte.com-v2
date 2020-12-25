@@ -52,6 +52,7 @@ export const blogListQuery = graphql`
             slug
             description
             date(formatString: "MMMM DD, YYYY")
+            tags
           }
         }
       }

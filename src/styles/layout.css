@@ -283,6 +283,12 @@ footer .copyright a{
 .blog-social-image img {
     width: 100%;
 }
+
+.more-posts-button {
+    margin: 2em;
+    text-align: center;
+}
+
 /*
 ****************************
 * Global UI Components
@@ -315,4 +321,32 @@ hr {
 a, a:visited, a:focus {
     color: #07ABEC;
     text-decoration: none;
+}
+
+/*
+****************************
+* Tag styles
+****************************
+*/
+.tag-list > h1 {
+  text-align: center;
+}
+
+.tagged-posts-list h1 {
+    text-align: center;
+}
+
+.all-tags-link {
+    text-align: center;
+    margin: 2em;
+}
+
+.tags-link-list span {
+    margin-top: 1em;
+    font-size: 12px;
+    display: inline-block;
+    background: #07ABEC;
+    color: #fff;
+    margin-right: 10px;
+    padding: 5px;
 }
