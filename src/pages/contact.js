@@ -4,7 +4,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Contact = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  function submitForm(ev) {
+    ev.preventDefault()
+    const form = ev.target
+    const data = new FormData(form)
+    const xhr = new XMLHttpRequest()
+    xhr.open(form.method, form.action)
+    xhr.setRequestHeader("Accept", "application/json")
+    xhr.onreadystatechange = () => {
+      window.location = "/thank-you"
+    }
+    xhr.send(data)
+  }
 
   return (
     <Layout>
@@ -19,8 +30,8 @@ const Contact = () => {
         <form
           name="contact"
           method="POST"
-          data-netlify="true"
-          action="/thank-you"
+          action="https://formspree.io/f/mrgepdoe"
+          onSubmit={submitForm}
         >
           <input type="hidden" name="form-name" value="Contact Me" />
           <div className="form-group">
@@ -29,6 +40,7 @@ const Contact = () => {
               type="text"
               className="form-control"
               id="frmName"
+              name="frmName"
               placeholder="Your Name"
             />
           </div>
@@ -38,6 +50,7 @@ const Contact = () => {
               type="email"
               className="form-control"
               id="frmEmail"
+              name="frmEmail"
               placeholder="name@example.com"
             />
           </div>
@@ -47,6 +60,7 @@ const Contact = () => {
               type="text"
               className="form-control"
               id="frmSubject"
+              name="frmSubject"
               placeholder="Subject"
             />
           </div>
@@ -56,6 +70,7 @@ const Contact = () => {
               className="form-control"
               id="frmMessage"
               rows="3"
+              name="frmMessage"
             ></textarea>
           </div>
           <div class="form-submit">
