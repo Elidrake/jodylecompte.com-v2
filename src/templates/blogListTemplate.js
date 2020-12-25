@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import PostLink from "../components/postLink"
 
 export default class BlogList extends React.Component {
@@ -16,6 +17,7 @@ export default class BlogList extends React.Component {
     const posts = this.props.data.allMarkdownRemark.edges
     return (
       <Layout>
+        <SEO title="Blog Posts" />
         <div className="blog-latest-posts" id="blog-posts">
           <h2>All Posts</h2>
           {posts.map(({ node }) => {

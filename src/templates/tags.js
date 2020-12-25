@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import PostLink from "../components/postLink"
 
 const Tags = ({ pageContext, data }) => {
@@ -12,21 +13,24 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
 
   return (
-    <Layout>
-      <div className="tagged-posts-list">
-        <h1>{tagHeader}</h1>
-        <ul>
-          {edges.map(({ node }) => {
-            return <PostLink post={node} />
-          })}
-        </ul>
-        <div className="all-tags-link">
-          <Link className="btn" to="/tags">
-            All tags
-          </Link>
+    <>
+      <SEO title={tag} />
+      <Layout>
+        <div className="tagged-posts-list">
+          <h1>{tagHeader}</h1>
+          <ul>
+            {edges.map(({ node }) => {
+              return <PostLink post={node} />
+            })}
+          </ul>
+          <div className="all-tags-link">
+            <Link className="btn" to="/tags">
+              All tags
+            </Link>
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   )
 }
 

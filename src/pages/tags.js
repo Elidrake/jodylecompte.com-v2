@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const TagsPage = ({
   data: {
@@ -14,7 +15,7 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <Helmet title={title} />
+    <SEO title="Tags" />
     <div class="tag-list">
       <h1>Tags</h1>
       <ul>
