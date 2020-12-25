@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import ImageGallery from "react-image-gallery"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const projects = [
   {
@@ -20,6 +21,7 @@ const Portfolio = () => {
 
   return (
     <Layout>
+      <SEO title="Portfolio" />
       <div className="portfolio">
         <h1>Portfolio</h1>
         <ImageGallery
