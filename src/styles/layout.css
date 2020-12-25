@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import "~react-image-gallery/styles/css/image-gallery.css";
 
 html, body {
     height: 100%;
@@ -400,4 +401,19 @@ a, a:visited, a:focus {
 
 .sidebar-links li:hover a {
     color: #fff;
+}
+
+/*
+****************************
+* Portfolio styles
+****************************
+*/
+
+.portfolio h1 {
+    text-align: center;
+}
+
+.portfolio-item-details a {
+    display: inline-block;
+    margin: 0.5em;
 }
