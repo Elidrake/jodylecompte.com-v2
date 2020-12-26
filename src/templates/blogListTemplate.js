@@ -19,7 +19,7 @@ export default class BlogList extends React.Component {
       <Layout>
         <SEO title="Blog Posts" />
         <div className="blog-latest-posts" id="blog-posts">
-          <h2>All Posts</h2>
+          <h1 style={{ textAlign: "center" }}>All Posts</h1>
           {posts.map(({ node }) => {
             return <PostLink post={node} />
           })}
