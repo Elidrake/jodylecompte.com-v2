@@ -84,6 +84,24 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-136589283-1",
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        pageTransitionDelay: 0,
+        optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
+        experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
+        variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
+        defer: false,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+        cookieDomain: "jodylecompte.com",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
