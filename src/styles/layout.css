@@ -433,6 +433,10 @@ a, a:visited, a:focus {
     margin: 0.5em;
 }
 
+.portfolio img {
+    max-width: 450px;
+}
+
 /*
 ****************************
 * Contact styles

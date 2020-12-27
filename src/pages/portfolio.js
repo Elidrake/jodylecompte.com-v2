@@ -14,6 +14,14 @@ const projects = [
     demo: "https://slimwhizzy.jodylecompte.com",
     github: "https://github.com/jodylecompte/slimwhizzy",
   },
+  {
+    original: "/portfolio/adlinx.png",
+    thumbnail: "/portfolio/adlinx.png",
+    name: "AdLinx",
+    desc:
+      "AdLinx is a URL shortener and URL manager optimized for digital marketers, implemented in Laravel.",
+    github: "https://github.com/jodylecompte/adlinx",
+  },
 ]
 
 const Portfolio = () => {
