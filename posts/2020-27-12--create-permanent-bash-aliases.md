@@ -3,12 +3,12 @@ title: Creating Permanent Bash Aliases in Linux
 date: "2020-12-27T15:50:32.169Z"
 template: "post"
 slug: "/posts/create-permanent-bash-aliases/"
-description: "Aliases are a convenient way to shorten commands, create multiple new commands combining smaller commands 
-when working with the Bash shell in linux. Let's take a look at how to create aliases."
-socialImage: "/media/bash_aliases.png"
 tags:
 - "Linux"
 - "Bash"
+  description: "Aliases are a convenient way to shorten commands, create multiple new commands combining smaller commands
+  when working with the Bash shell in linux. Let's take a look at how to create aliases."
+  socialImage: "/media/bash_aliases.png"
 ---
 
 ## Prerequisites

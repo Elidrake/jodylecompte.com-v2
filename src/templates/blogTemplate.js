@@ -10,9 +10,10 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html, tableOfContents } = markdownRemark
+  console.log(frontmatter)
   return (
     <Layout>
-      <SEO title={frontmatter.title} description={frontmatter.description} />
+      <SEO title={frontmatter.title} desc={frontmatter.description} />
       <div className="blog-post-container">
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
@@ -63,6 +64,7 @@ export const pageQuery = graphql`
         socialImage
         title
         tags
+        description
       }
     }
   }

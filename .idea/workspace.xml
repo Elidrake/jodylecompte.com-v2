@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac3536c3-2ae2-4525-8dd9-ff850afdfb71" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/2020-27-12--create-permanent-bash-aliases.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/2020-27-12--create-permanent-bash-aliases.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/seo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/seo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/templates/blogTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/blogTemplate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +49,7 @@
       <updated>1608755013917</updated>
       <workItem from="1608755015357" duration="13648000" />
       <workItem from="1608950660748" duration="2516000" />
-      <workItem from="1609000924439" duration="4898000" />
+      <workItem from="1609000924439" duration="6636000" />
     </task>
     <servers />
   </component>
