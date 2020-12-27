@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ac3536c3-2ae2-4525-8dd9-ff850afdfb71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/layout.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608755013917</updated>
       <workItem from="1608755015357" duration="13648000" />
-      <workItem from="1608950660748" duration="1902000" />
+      <workItem from="1608950660748" duration="2516000" />
+      <workItem from="1609000924439" duration="689000" />
     </task>
     <servers />
   </component>
