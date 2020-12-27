@@ -32,37 +32,44 @@ const Portfolio = () => {
       <SEO title="Portfolio" />
       <div className="portfolio">
         <h1>Portfolio</h1>
-        <ImageGallery
-          items={projects}
-          showFullscreenButton={false}
-          showPlayButton={false}
-          onSlide={index => setCurrentIndex(index)}
-          showThumbnails={false}
-        />
-      </div>
-      <div className="portfolio-item-details">
-        <h2>{projects[currentIndex].name}</h2>
-        <p>{projects[currentIndex].desc}</p>
-        {projects[currentIndex].demo && (
-          <a
-            href={projects[currentIndex].demo}
-            target="_blank"
-            rel="noreferrer"
-            className="btn"
-          >
-            Demo
-          </a>
-        )}
-        {projects[currentIndex].github && (
-          <a
-            href={projects[currentIndex].github}
-            target="_blank"
-            rel="noreferrer"
-            className="btn"
-          >
-            Github
-          </a>
-        )}
+        {projects.map((project, idx) => {
+          return (
+            <>
+              <div className="portfolio-item">
+                <div className="portfolio-header">
+                  <h2>{project.name}</h2>
+                </div>
+                <div className="portfolio-image">
+                  <img src={project.original} alt={project.desc} />
+                </div>
+                <div className="portfolio-desc">{project.desc}</div>
+                <div className="portfolio-buttons">
+                  {project.github && (
+                    <a
+                      href={projects[currentIndex].github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn"
+                    >
+                      Github
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={projects[currentIndex].demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn"
+                    >
+                      Demo
+                    </a>
+                  )}
+                </div>
+              </div>
+              {idx != projects.length - 1 ? <hr /> : ""}
+            </>
+          )
+        })}
       </div>
     </Layout>
   )

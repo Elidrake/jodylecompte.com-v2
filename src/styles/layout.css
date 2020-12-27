@@ -428,13 +428,23 @@ a, a:visited, a:focus {
     text-align: center;
 }
 
-.portfolio-item-details a {
+.portfolio-item .portfolio-buttons a{
     display: inline-block;
-    margin: 0.5em;
+    margin: 1em;
+}
+
+.portfolio-desc {
+    margin: 1em;
 }
 
 .portfolio img {
-    max-width: 600px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    text-align: center;
 }
 
 /*
