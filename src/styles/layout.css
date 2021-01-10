@@ -310,6 +310,11 @@ footer .copyright a{
 * Global UI Components
 ****************************
 */
+
+img {
+    width: 100%;
+}
+
 .btn {
     border: 1px solid #07ABEC;
     color: #07ABEC;
