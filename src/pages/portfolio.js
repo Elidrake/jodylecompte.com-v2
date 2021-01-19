@@ -46,7 +46,7 @@ const Portfolio = () => {
                 <div className="portfolio-buttons">
                   {project.github && (
                     <a
-                      href={projects[currentIndex].github}
+                      href={projects[idx].github}
                       target="_blank"
                       rel="noreferrer"
                       className="btn"
@@ -56,7 +56,7 @@ const Portfolio = () => {
                   )}
                   {project.demo && (
                     <a
-                      href={projects[currentIndex].demo}
+                      href={projects[idx].demo}
                       target="_blank"
                       rel="noreferrer"
                       className="btn"
